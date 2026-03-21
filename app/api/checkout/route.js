@@ -8,7 +8,7 @@ export async function POST() {
     payment_method_types: ["card"],
     line_items: [
       {
-        price: "price_XXXXX",
+        price: "price_1TDINw3jp4ml1gaIRq5yVlYG",
         quantity: 1,
       },
     ],
