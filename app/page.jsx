@@ -1,6 +1,14 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
+const handleSubscribe = async () => {
+  const res = await fetch("/api/checkout", {
+    method: "POST",
+  });
+
+  const data = await res.json();
+  window.location.href = data.url;
+};
 
 export default function Page() {
   const [isMember, setIsMember] = useState(false);
@@ -20,7 +28,20 @@ export default function Page() {
         onClick={() => setIsMember(true)}
         style={{marginTop:"2rem", padding:"1rem 2rem", background:"#22c55e", border:"none", borderRadius:"10px"}}
       >
-        Subscribe – $9.99/month
+       <button 
+  onClick={handleSubscribe}
+  style={{
+    marginTop:"2rem", 
+    padding:"1rem 2rem", 
+    background:"#22c55e", 
+    border:"none", 
+    borderRadius:"10px",
+    cursor:"pointer"
+  }}
+>
+  Subscribe – Unlock The Vault ($9.99/month)
+</button>
+
       </button>
 
       <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))", gap:"1rem", marginTop:"3rem"}}>
