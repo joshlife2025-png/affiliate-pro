@@ -2,7 +2,7 @@ import Stripe from "stripe";
 
 export async function POST() {
   try {
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+    const stripe = new Stripe(process.env.sk_test_51TDICA3jp4ml1gaIbEouJkhaK7D6jPgYwVRZ2qxHP5rmPGiH8DOGLSbLgcaAhYjnc4hfb425iRDiDXJWZrJBjG0W006GrLnrEW);
 
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
