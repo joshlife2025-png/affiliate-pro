@@ -9,7 +9,7 @@ export async function POST() {
       payment_method_types: ["card"],
       line_items: [
         {
-          price: "price_REPLACE_THIS", // <-- your real price ID
+          price: "price_1TDINw3jp4ml1gaIRq5yVlYG", // <-- your real price ID
           quantity: 1,
         },
       ],
